@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Lexend, Arsenal } from "next/font/google";
 import "./globals.css";
 import Header from "./header/page";
 
-const poppins = Poppins({
+const lexend = Lexend({
   subsets: ["latin"],
-  weight: "500"
+  weight: ["400"]
+});
+const arsenal = Arsenal({
+  subsets: ["latin"],
+  weight: "400"
 });
 
 export const metadata: Metadata = {
@@ -20,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={lexend.className}>
         <Header />
         {children}
       </body>
