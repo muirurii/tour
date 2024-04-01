@@ -86,7 +86,7 @@ const FeaturedPackages: React.FC = () => {
         }
     };
     return (
-        <section className="featured-packages-section pb-16">
+        <section className="featured-packages-section pb-16 relative">
             <Heading heading="Luxury Safari Packages" subHeading="Featured" />
             <Carousel responsive={responsive} autoPlay={true} infinite={true} rewind={true} showDots={true} focusOnSelect={true} renderDotsOutside={true} >
                 {safariPackages.map((packageObj) => <FeaturedCard packageObj={packageObj} key={packageObj.description} />)}

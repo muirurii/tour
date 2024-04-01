@@ -1,6 +1,7 @@
 
 import FeaturedPackages from "./home/Featured";
 import Hero from "./home/Hero";
+import Testimonials from "./home/Testimonials";
 import Welcome from "./home/Welcome";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       <Hero />
       <Welcome />
       <FeaturedPackages />
-      <div className="min-h-screen"></div>
+      <Testimonials />
     </main>
   );
 }
