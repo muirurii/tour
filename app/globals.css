@@ -25,4 +25,14 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .service-menu:hover>.service-links {
+    display: grid;
+  }
+
 }
+
+
+/* .service-menu:hover {
+  color: red;
+} */
