@@ -32,6 +32,19 @@ body {
 
 }
 
+.clip {
+  /* height: 0; */
+  /* opacity: 0; */
+  transform: scale(0);
+}
+
+.top-bottom {
+  transform-origin: top right;
+}
+
+.left-right {
+  transform-origin: bottom right;
+}
 
 /* .service-menu:hover {
   color: red;

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { MouseEventHandler, useEffect, useState } from 'react'
 import { FiExternalLink } from 'react-icons/fi';
-import { SubMenu } from '../Types';
+import { SubMenu } from '../../Types';
 
 
 
@@ -27,14 +27,14 @@ const MenuCards = ({ subtitles }: SubMenu) => {
          rounded-sm 
         after:left-[${mousePosition.x}px] after:top-[${mousePosition.y}px]
         `}>
-          <div style={{ left: mousePosition.x, top: mousePosition.y }} className="absolute w-80 h-80 bg-redishMain z-10 rounded-full transition-all duration-100"></div>
+          <div style={{ left: mousePosition.x, top: mousePosition.y }} className="absolute w-96 h-80 bg-redishMain z-10 rounded-full transition-all duration-100"></div>
           {subtitles.map(({ title, link, img }) => (
-            <Link key={title} href="#safari-packages" className='bg-[#e4e4e4]  w-full h-[200px] z-10 rounded-md overflow-hidden
+            <Link key={title} href="#safari-packages" className='bg-[#e4e4e4]  w-full h-[250px] z-10 rounded-md overflow-hidden
             relative after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 border after:bg-inherit after:z-10 border-slate-50
             '>
               <section className="relative z-20">
                 <p className="text-center py-2 border-b border-slate-50">{title}</p>
-                <div className="absolute top-2 right-2"><FiExternalLink className='h-ful' /></div>
+                <div className="absolute top-2 right-2"><FiExternalLink /></div>
               </section>
             </Link>
           ))}

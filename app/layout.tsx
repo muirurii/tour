@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import "./globals.css";
-import Header from "./header/page";
+import Header from "./components/header/page";
+import Footer from "./components/Footer";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${lexend.className} overflow-x-hidden text-black bg-slate-100 text-lg`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

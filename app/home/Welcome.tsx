@@ -2,7 +2,7 @@ import Heading from "../components/Heading";
 
 const Welcome = () => {
     return (
-        <section className="pb- relative fle flex-col justify-evenly  items-center">
+        <section className="pb- relative fle flex-col justify-evenly  items-center mt-[100vh] bg-slate-100">
             <section className="">
                 <Heading heading="Welcome to KenyaLuxSafaris.com" subHeading="who we are" />
                 <div className="flex items-center justify-center flex-col gap-16 text-center absolute top-1/2 left-1/2  w-screen -translate-x-1/2 -translate-y-1/2">

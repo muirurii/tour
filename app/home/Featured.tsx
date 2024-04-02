@@ -11,55 +11,82 @@ const safariPackages: Package[] = [
         title: 'Maasai Mara Majesty',
         description: 'Encounter the Big Five in Maasai Mara, enjoy sunset game drives, and stay in luxurious tented camps.',
         link: '#maasai-mara-majesty-details',
-        image: 'https://images.pexels.com/photos/2648125/pexels-photo-2648125.jpeg?auto=compress&cs=tinysrgb&w=600',
+        images: [
+            "https://images.pexels.com/photos/12004888/pexels-photo-12004888.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "https://images.pexels.com/photos/10822356/pexels-photo-10822356.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ]
     },
     {
         title: 'Amboseli Adventure',
         description: 'Witness elephants against the backdrop of Mount Kilimanjaro in Amboseli National Park.',
         link: '#amboseli-adventure-details',
-        image: 'path/to/amboseli-image.jpg',
+        images: [
+            "https://images.pexels.com/photos/13033120/pexels-photo-13033120.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "https://images.pexels.com/photos/12844386/pexels-photo-12844386.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ]
     },
     {
         title: 'Serengeti Spectacular',
         description: 'Explore the vast plains of Serengeti National Park and witness the Great Migration.',
         link: '#serengeti-spectacular-details',
-        image: 'path/to/serengeti-image.jpg',
+        images: [
+            "https://images.pexels.com/photos/6056778/pexels-photo-6056778.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "https://images.pexels.com/photos/6427367/pexels-photo-6427367.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ]
     },
     {
         title: 'Luxe Lake Nakuru',
         description: 'Discover the flamingos of Lake Nakuru and experience luxury at lakeside lodges.',
         link: '#luxe-lake-nakuru-details',
-        image: 'path/to/lake-nakuru-image.jpg',
+        images: [
+            "https://images.pexels.com/photos/18104411/pexels-photo-18104411/free-photo-of-flock-of-flamingos-on-sea-coast.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "https://images.pexels.com/photos/17814165/pexels-photo-17814165/free-photo-of-flamingos-near-stream.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ]
     },
     {
         title: 'Tsavo Tranquility',
         description: 'Experience the rugged beauty of Tsavo National Park and unwind in luxury accommodations.',
         link: '#tsavo-tranquility-details',
-        image: 'path/to/tsavo-image.jpg',
+        images: [
+            "https://images.pexels.com/photos/9807764/pexels-photo-9807764.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "https://images.pexels.com/photos/3992516/pexels-photo-3992516.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ]
     },
     {
         title: 'Luxury Laikipia Safari',
         description: 'Explore the pristine wilderness of Laikipia and encounter diverse wildlife in luxury lodges.',
         link: '#luxury-laikipia-safari-details',
-        image: 'path/to/laikipia-image.jpg',
+        images: [
+            "https://images.pexels.com/photos/4404524/pexels-photo-4404524.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "https://images.pexels.com/photos/39504/giraffe-animal-funny-facial-expression-39504.jpeg?auto=compress&cs=tinysrgb&w=1024"
+        ]
     },
     {
         title: 'Luxury Coastal Retreat',
         description: 'Combine safari adventures with a luxurious beach getaway along Kenya\'s stunning coastline.',
         link: '#luxury-coastal-retreat-details',
-        image: 'path/to/coastal-retreat-image.jpg',
+        images: [
+            "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ]
     },
     {
         title: 'Exclusive Mara Conservancies',
         description: 'Discover the exclusive conservancies bordering Maasai Mara and enjoy unrivaled wildlife experiences.',
         link: '#exclusive-mara-conservancies-details',
-        image: 'https://images.pexels.com/photos/773000/pexels-photo-773000.jpeg?auto=compress&cs=tinysrgb&w=600',
+        images: [
+            "https://images.pexels.com/photos/17766016/pexels-photo-17766016/free-photo-of-elderly-man-sitting-on-an-elephant.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "https://images.pexels.com/photos/12004884/pexels-photo-12004884.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ]
     },
     {
         title: 'Wildlife Photography Expedition',
         description: 'Join a specialized photography safari to capture stunning wildlife moments in Kenya\'s natural habitats.',
         link: '#wildlife-photography-expedition-details',
-        image: 'https://images.pexels.com/photos/2804411/pexels-photo-2804411.jpeg?auto=compress&cs=tinysrgb&w=600',
+        images: [
+            "https://images.pexels.com/photos/17749482/pexels-photo-17749482/free-photo-of-young-men-in-colorful-shuka-throws-standing-on-a-cow-pasture.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "https://images.pexels.com/photos/9185432/pexels-photo-9185432.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ]
     },
 ];
 
@@ -86,11 +113,11 @@ const FeaturedPackages: React.FC = () => {
         }
     };
     return (
-        <section className="featured-packages-section pb-16 relative">
+        <section className="featured-packages-section pb-16 relative bg-slate-100">
             <Heading heading="Luxury Safari Packages" subHeading="Featured" />
-            <Carousel responsive={responsive} autoPlay={true} infinite={true} rewind={true} showDots={true} focusOnSelect={true} renderDotsOutside={true} >
+            <Carousel transitionDuration={4000} responsive={responsive} autoPlay={true} infinite={true} rewind={true} showDots={true} focusOnSelect={true} renderDotsOutside={true} >
                 {safariPackages.map((packageObj) => <FeaturedCard packageObj={packageObj} key={packageObj.description} />)}
-            </Carousel>;
+            </Carousel>
         </section >
     );
 };

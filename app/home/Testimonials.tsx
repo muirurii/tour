@@ -20,7 +20,7 @@ export const Testimonial = () => {
 
 const Testimonials = () => {
     return (
-        <section className='pb-16'>
+        <section className='pb-16 bg-slate-100'>
             <Heading heading="Testimonials" subHeading="what customers say" />
             <section className="flex items-center flex-wap justify-evenly gap-12">
                 <Testimonial />
